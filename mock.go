@@ -96,7 +96,8 @@ func (m *Mock) Update(distinctId string, u *Update) error {
 
 	switch u.Operation {
 	case "$set":
-		for key, val := range u.Properties {
+		props := u.Properties.(map[string]interface{})
+		for key, val := range props {
 			p.Properties[key] = val
 		}
 	default:

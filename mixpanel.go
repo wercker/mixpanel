@@ -59,7 +59,7 @@ type Update struct {
 	Operation string
 
 	// Custom properties. At least one must be specified.
-	Properties map[string]interface{}
+	Properties interface{}
 }
 
 // Track create a events to current distinct id
